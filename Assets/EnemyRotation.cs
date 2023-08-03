@@ -26,8 +26,6 @@ public class EnemyRotation : MonoBehaviour
     void Update()
     {
         initialRotation = transform.rotation;
-        Quaternion directionToTarget = target.rotation;
-        Quaternion targetRotation = Quaternion.LookRotation(directionToTarget, Vector3.up);
 
         if (initialRotation != targetRotation)
         {
@@ -54,9 +52,9 @@ public class EnemyRotation : MonoBehaviour
         }
         if(delayTimer >= 0.33)
         {
-            //Quaternion newRotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-            //transform.rotation = newRotation;
-            transform.rotation = Quaternion.RotateTowards(initialRotation, targetRotation, rotationSpeed * Time.deltaTime);
+            Quaternion newRotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            transform.rotation = newRotation;
+            //transform.rotation = Quaternion.RotateTowards(initialRotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }
     void dashRotateToTarget()
