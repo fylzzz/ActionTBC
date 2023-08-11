@@ -19,7 +19,8 @@ public class PlayerData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        staminaData.SetText("Stamina: " + PlayerMovement.stamina);
+        // write text to UI
+        staminaData.SetText("Stamina: " + PlayerMovement.stamina); // again, why is this in PLayerMovement???
         playerHealth.SetText("Player Health: " + GameStateManager.PlayerHealth);
         enemyHealth.SetText("Enemy Health: " + GameStateManager.EnemyHealth);
     }
