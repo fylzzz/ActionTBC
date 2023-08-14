@@ -11,7 +11,7 @@ public class GameStateManager : MonoBehaviour
 
     public void Start()
     {
-        GameState gameState = GameState.PLAYERTURN;
+        GameState gameState = GameState.PLAYERTURN; // start on player turn
         Debug.Log(gameState);
     }
 
@@ -30,7 +30,7 @@ public class GameStateManager : MonoBehaviour
 
     public static void SetGameState(GameState state)
     {
-        // ACTUALLy change the state
+        // ACTUALLY change the state
         gameState = state;
         Debug.Log("State Change:" + gameState);
     }
