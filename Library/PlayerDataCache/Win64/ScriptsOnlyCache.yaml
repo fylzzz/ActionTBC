@@ -921,7 +921,7 @@ ScriptsOnlyBuild:
     className: EnemyRotation
   - hash:
       serializedVersion: 2
-      Hash: ae75836614c0bdffbebfbb9832970058
+      Hash: 40cba910eb8ac8880866114c4717c1e5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TurnManager

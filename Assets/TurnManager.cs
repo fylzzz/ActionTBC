@@ -9,6 +9,7 @@ public class TurnManager : MonoBehaviour
     public Material BaseColour;
     public Material TimerColour;
     public Material AttackColour;
+    public LayerMask mask;
 
     public GameObject Enemy; // enemy object reference
 
@@ -41,15 +42,14 @@ public class TurnManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
 
             Enemy.GetComponent<MeshRenderer>().material = AttackColour; // change colour for attack
-            
-            Ray ray = new Ray(transform.position, transform.forward); // raycast from enemy
-            RaycastHit hitData;
-            if (Physics.Raycast(ray, out hitData)) // if raycast hits player
+
+            if (Physics.Raycast(transform.position, transform.forward, out var hit, Mathf.Infinity, mask))
             {
-                Debug.Log("hit" + hitData);
-                GameStateManager.PlayerHealth--; // damage player
+                var obj = hit.collider.gameObject;
+
+                Debug.Log($"looking at {obj.name}", this);
             }
-            
+
             yield return new WaitForSeconds(0.5f);
 
             Enemy.GetComponent<MeshRenderer>().material = BaseColour; // go back to normal colour

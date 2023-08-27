@@ -506,7 +506,7 @@ GameObject:
   - component: {fileID: 725808153}
   - component: {fileID: 725808152}
   - component: {fileID: 725808151}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -602,7 +602,7 @@ GameObject:
   - component: {fileID: 981442492}
   - component: {fileID: 981442494}
   - component: {fileID: 981442493}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MainCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 1125291904}
   - component: {fileID: 1125291905}
   - component: {fileID: 1125291906}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1120,7 +1120,7 @@ GameObject:
   - component: {fileID: 1778103524}
   - component: {fileID: 1778103523}
   - component: {fileID: 1778103522}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1253,6 +1253,9 @@ MonoBehaviour:
   BaseColour: {fileID: 2100000, guid: 37ed208cf5b398844b13f5f1cfd279fd, type: 2}
   TimerColour: {fileID: 2100000, guid: 02201c5af4d3a83449db4d66a069627e, type: 2}
   AttackColour: {fileID: 2100000, guid: 27f790410bcc67c49bf0bd11c04e69dc, type: 2}
+  mask:
+    serializedVersion: 2
+    m_Bits: 8
   Enemy: {fileID: 1330423475}
 --- !u!1 &1928002278
 GameObject:
